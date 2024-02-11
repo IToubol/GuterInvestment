@@ -101,7 +101,9 @@ elif st.session_state.vins:
             fn, ln = customers.loc[st.session_state.customer, ['first_name', 'last_name']]
             st.write(f":red[Connecté: {fn} {ln}]")
             st.button("Deconnexion", on_click=deconnexion, use_container_width=True)
-            st.button("Ma cave", on_click=cave, use_container_width=True)
+            st.button("Ma cave",
+                    #   on_click=cave,
+                      use_container_width=True)
 
         elif st.button("Connexion", use_container_width=True):
             st.session_state.identification = True
